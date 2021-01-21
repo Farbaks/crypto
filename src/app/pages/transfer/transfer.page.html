@@ -1,0 +1,58 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Transfer</p>
+        </div>
+        <div class="img" [routerLink]="['history']">
+          <img src="../../../assets/icons/invoice.png" />
+        </div>
+      </div>
+    </div>
+    <div class="section1">
+      <div class="from-to-icon">
+        <span class="from-icon"></span>
+        <span class="line"></span>
+        <span class="to-icon"></span>
+      </div>
+      <div class="from-to-text">
+        <p>From</p>
+        <p>To</p>
+      </div>
+      <div class="transfer-list" id="transfer-list">
+        <div class="transfer-item">
+          <img src="../../../assets/icons/transfer (1).png" />
+          <p>SPOT wallet</p>
+        </div>
+        <div class="transfer-item" id="transfer-item-last">
+          <img src="../../../assets/icons/p2p.png" />
+          <p>P2P wallet</p>
+        </div>
+      </div>
+      <div class="rotate-icon" (click)="this.switch()">
+        <img src="../../../assets/icons/switch.png" />
+      </div>
+    </div>
+    <div class="section2">
+      <p class="text-heading">Coin</p>
+      <div class="coin-filter">
+        <img src="{{this.selectedCoin.img}}" />
+        <select [(ngModel)]="this.selectedCoinName" (change)="changeCoin()">
+          <option *ngFor="let data of sampleData" value="{{data.name}}">{{data.name}}</option>
+        </select>
+      </div>
+      <p class="text-heading">Transfer Amount</p>
+      <div class="coin-filter">
+        <input type="number" [(ngModel)]="this.coinValue" />
+        <p class="text1">{{this.selectedCoin.name}}</p>
+        <p class="text2" (click)="this.maxValue()">MAX</p>
+      </div>
+      <p class="small-text">Available Balance: <span class="green">{{this.selectedCoin.balance}} {{this.selectedCoin.name}}</span></p>
+      <div class="button">
+        <button>Transfer</button>
+      </div>
+    </div>
+  </div>
+</ion-content>

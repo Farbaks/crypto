@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Withdraw</p>
+        </div>
+        <!-- <div class="img" [routerLink]="['history']">
+          <img src="../../../assets/icons/invoice.png" />
+        </div> -->
+      </div>
+    </div>
+    <div class="section1">
+      <div class="coin-filter">
+        <img src="{{this.selectedCoin.img}}" />
+        <select [(ngModel)]="this.selectedCoinName" (change)="changeCoin()">
+          <option *ngFor="let data of sampleData" value="{{data.name}}">{{data.name}}</option>
+        </select>
+      </div>
+      <p class="text-subheading">Network</p>
+      <p class="small-block"><span>BTC</span></p>
+      <p class="text-subheading">Address</p>
+      <div class="coin-filter">
+        <p class="text1">bjxhg34rjhb23ghhgh23</p>
+        <p class="text2" (click)="this.copyValue()">COPY</p>
+      </div>
+      <p class="text-subheading">Amount</p>
+      <div class="coin-filter">
+        <input type="number" placeholder="Enter Amount" />
+      </div>
+      <div class="summary">
+        <div class="trade-detail">
+          <p class="text2">Quantity:</p>
+          <p class="text1">0.003427BTC</p>
+        </div>
+        <div class="trade-detail">
+          <p class="text2">Amount:</p>
+          <p class="text1">$13,000.00</p>
+        </div>
+      </div>
+      <div class="bottom-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nulla ipsa animi voluptatibus reprehenderit aut,
+          fuga eveniet fugiat eius reiciendis voluptate nostrum. Optio, illo in. Repellendus nam cum eum perspiciatis.
+        </p>
+      </div>
+    </div>
+    <div class="fixed-button">
+      <button>Transfer</button>
+    </div>
+  </div>
+</ion-content>

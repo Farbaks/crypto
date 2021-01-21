@@ -1,0 +1,116 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div>
+          <p class="text-subheading">Total Balance</p>
+          <p class="text-heading">0.0035478BTC</p>
+        </div>
+        <div>
+          <ion-icon name="notifications-outline"></ion-icon>
+        </div>
+      </div>
+      <div class="top-1">
+        <div class="top-1-section" [routerLink]="['/tabs/wallet']">
+          <!-- <img src="" /> -->
+          <ion-icon name="wallet-outline"></ion-icon>
+          <p>Wallet</p>
+        </div>
+        <div class="top-1-section" [routerLink]="['transfer']">
+          <img src="../../../assets/icons/transfer-white.png" />
+          <!-- <ion-icon name="cash-outline"></ion-icon> -->
+          <p>Transfer</p>
+        </div>
+        <div class="top-1-section">
+          <!-- <img src="" /> -->
+          <ion-icon name="person-outline"></ion-icon>
+          <p>Account</p>
+        </div>
+      </div>
+    </div>
+    <div class="content-2">
+      <div class="card-list">
+        <div class="card-item" [routerLink]="['deposit']">
+          <img src="../../../assets/icons/safebox.png" />
+          <p>Deposit</p>
+        </div>
+        <div class="card-item" [routerLink]="['/withdraw']">
+          <img src="../../../assets/icons/withdrawal.png" />
+          <p>Withdrawal</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/file.png" />
+          <p>Covert</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/walkie-talkie.png" />
+          <p>P2P</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/casino.png" />
+          <p>Coins</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/receipt.png" />
+          <p>FAQs</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/transaction (1).png" />
+          <p>Spot</p>
+        </div>
+        <div class="card-item">
+          <img src="../../../assets/icons/more.png" />
+          <p>Chat/Support</p>
+        </div>
+      </div>
+    </div>
+    <div class="content-3">
+      <p class="text-heading2">Market</p>
+      <div class="market-list">
+        <div class="market-item">
+          <p class="text-subheading2">
+            <span>BNB</span> /
+            <span>USDT</span>&nbsp;
+            <span class="red">-8.05%</span>
+          </p>
+          <p class="price red">23.4642</p>
+          <canvas class="chart" #myChart height="70"></canvas>
+        </div>
+        <div class="market-item">
+          <p class="text-subheading2">
+            <span>BNB</span> /
+            <span>USDT</span>&nbsp;
+            <span class="red">-6.59%</span>
+          </p>
+          <p class="price red">23.4642</p>
+          <canvas class="chart" #myChart2 height="70"></canvas>
+        </div>
+        <div class="market-item">
+          <p class="text-subheading2">
+            <span>BNB</span> /
+            <span>USDT</span>&nbsp;
+            <span class="red">-2.35%</span>
+          </p>
+          <p class="price red">23.4642</p>
+          <canvas class="chart" #myChart3 height="70"></canvas>
+        </div>
+      </div>
+      <div class="content-4">
+        <div class="text">
+          <p class="text-heading2">Cryptocurrencies</p>
+          <p class="text-subheading2">Easy with promo code</p>
+        </div>
+        <button>VIEW ALL</button>
+      </div>
+      <div class="card">
+
+      </div>
+    </div>
+  </div>
+</ion-content>

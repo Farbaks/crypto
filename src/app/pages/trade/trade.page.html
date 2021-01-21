@@ -1,0 +1,346 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Trade</p>
+        </div>
+        <div id="searchicon" (click)="this.openSearchBar()">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div class="search-input" id="searchcon">
+          <div id="searchbar">
+            <input type="search" placeholder="Search" />
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <span (click)="this.closeSearchBar()">Cancel</span>
+        </div>
+      </div>
+    </div>
+    <ion-segment mode="md" [(ngModel)]="segmentValue">
+      <ion-segment-button value="buy">
+        <ion-label>BUY</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="sell">
+        <ion-label>SELL</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div class="section" *ngIf="this.segmentValue=='buy'">
+      <div class="tag-list">
+        <span class="tag-item">BTC</span>
+        <span class="tag-item">USDT</span>
+        <span class="tag-item">BUSD</span>
+        <span class="tag-item">BNB</span>
+        <span class="tag-item">ETH</span>
+        <span class="tag-item">USDT</span>
+        <span class="tag-item">BUSD</span>
+        <span class="tag-item">BNB</span>
+        <span class="tag-item">ETH</span>
+      </div>
+      <div class="trade-list">
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">Malawi</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/litecoin-22-441956.png" />
+            <div class="text-group1">
+              <p class="text1">BTC Master</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/devcoin-441952.png" />
+            <div class="text-group1">
+              <p class="text1">Farouk</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">Musa</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">BTC</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">BTC</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/buy/1']">Buy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" *ngIf="this.segmentValue=='sell'">
+      <div class="tag-list">
+        <span class="tag-item">BTC</span>
+        <span class="tag-item">USDT</span>
+        <span class="tag-item">BUSD</span>
+        <span class="tag-item">BNB</span>
+        <span class="tag-item">ETH</span>
+        <span class="tag-item">USDT</span>
+        <span class="tag-item">BUSD</span>
+        <span class="tag-item">BNB</span>
+        <span class="tag-item">ETH</span>
+      </div>
+      <div class="trade-list">
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/aurouracoin-441945.png" />
+            <div class="text-group1">
+              <p class="text1">Ifeanyi</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/sell/1']">Sell</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/etherium-1-441953.png" />
+            <div class="text-group1">
+              <p class="text1">BTC Master</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/sell/1']">Sell</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/aurouracoin-441945.png" />
+            <div class="text-group1">
+              <p class="text1">Ifeanyi</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/sell/1']">Sell</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">Nelson</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/sell/1']">Sell</button>
+          </div>
+        </div>
+        <div class="trade-item">
+          <div class="trade-detail">
+            <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+            <div class="text-group1">
+              <p class="text1">Malawi</p>
+              <p class="text2">225 Orders</p>
+              <div class="small-icon">
+                <img src="../../../assets/icons/safebox.png" />
+                <img src="../../../assets/icons/receipt.png" />
+              </div>
+            </div>
+            <div class="chart">
+            </div>
+            <div class="text-group2">
+              <p class="text1">$2.50</p>
+              <p class="text3">92.25%</p>
+            </div>
+          </div>
+          <div class="trade-detail2">
+            <div>
+              <p class="text2">Quantity <span class="text1">1,3424.12USDT</span></p>
+              <p class="text2">Limit <span class="text1">$10.00 - $600.00</span></p>
+            </div>
+            <button [routerLink]="['/trade/sell/1']">Sell</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

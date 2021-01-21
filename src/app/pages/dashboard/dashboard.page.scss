@@ -1,0 +1,193 @@
+ion-content {
+    --background: var(--ion-color-backgroundcolor4);
+}
+.content {
+    width: 100%;
+
+    .top {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        height: 250px;
+        padding: 16px;
+        background: -webkit-gradient(
+            linear,
+            0% 50%,
+            100% 50%,
+            color-stop(0, rgba(62, 190, 203, 1)),
+            color-stop(0.4736, rgba(71, 162, 226, 1)),
+            color-stop(1, rgba(74, 139, 236, 1))
+        );
+        background: linear-gradient(
+            90deg,
+            rgba(62, 190, 203, 1) 0%,
+            rgba(71, 162, 226, 1) 47.36%,
+            rgba(74, 139, 236, 1) 100%
+        );
+
+        .top-1 {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+            p {
+                margin: 0px;
+            }
+            .text-heading {
+                font-size: 1.13em;
+                color: var(--ion-color-textcolor6);
+                font-weight: 600;
+            }
+            .text-subheading {
+                font-size: 0.7em;
+                color: var(--ion-color-textcolor6);
+                font-weight: 300;
+                margin-bottom: 2px;
+            }
+            ion-icon {
+                font-size: 24px;
+                color: var(--ion-color-textcolor6);
+                --ionicon-stroke-width: 26px;
+            }
+            .top-1-section {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                padding: 40px 0;
+                p {
+                    margin: 10px 0 0 0;
+                    font-size: 0.8em;
+                    color: var(--ion-color-textcolor6);
+                    font-weight: 100;
+                    margin-bottom: 2px;
+                }
+                ion-icon {
+                    font-size: 38px;
+                    color: var(--ion-color-textcolor6);
+                    --ionicon-stroke-width: 20px;
+                }
+                img {
+                    width: 38px;
+                }
+            }
+        }
+    }
+    .content-2 {
+        width: 100%;
+        position: relative;
+        padding: 16px;
+        box-sizing: border-box;
+        margin-top: -70px;
+        .card-list {
+            width: 100%;
+            padding: 25px 16px;
+            display: flex;
+            flex-flow: row wrap;
+            z-index: 2;
+            box-shadow: 0px 0px 12px 2px rgba(0, 0, 0, 0.1), 0px 0px 15px 2px rgba(0, 0, 0, 0.04);
+            border-radius: 3px;
+            background-color: var(--ion-color-backgroundcolor7);
+
+            .card-item {
+                width: 19.75%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                margin-right: 7%;
+
+                p {
+                    margin: 10px 0 0 0;
+                    font-size: 0.7em;
+                    color: var(--ion-color-textcolor1);
+                    font-weight: 100;
+                    margin-bottom: 2px;
+                }
+                img {
+                    width: 38px;
+                }
+            }
+            .card-item:nth-child(4n) {
+                margin-right: 0;
+            }
+            .card-item:nth-child(1),
+            .card-item:nth-child(2),
+            .card-item:nth-child(3),
+            .card-item:nth-child(4) {
+                margin-bottom: 8%;
+            }
+        }
+    }
+    .content-3 {
+        width: 100%;
+        padding: 0px 16px 16px 16px;
+        .text-heading2 {
+            font-size: 1.05em;
+            color: var(--ion-color-textcolor);
+            font-weight: 600;
+            margin: 5px 0px;
+        }
+        .text-subheading2 {
+            font-size: 0.75em;
+            color: var(--ion-color-textcolor3);
+            font-weight: 500;
+            margin: 0px 0 2px 0;
+        }
+        .market-list {
+            width: 100%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0px;
+            .market-item {
+                width: 30%;
+                p {
+                    margin: 0;
+                }
+                .text-subheading2 {
+                    font-size: 0.7em;
+                    color: var(--ion-color-textcolor2);
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                }
+                .red {
+                    color: #ea1639;
+                }
+                .green {
+                    color: green;
+                }
+                .price {
+                    font-size: 1em;
+                    font-weight: 600;
+                    margin: 5px 0px;
+                }
+                .chart {
+                    width: 100%;
+                }
+            }
+        }
+        .content-4 {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button {
+                border: solid 2px var(--ion-color-backgroundcolor1);
+                border-radius: 3px;
+                font-size: 0.6em;
+                padding: 8px 23px;
+                color: var(--ion-color-backgroundcolor1);
+                font-weight: 500;
+                background-color: transparent;
+            }
+        }
+        .card {
+            width: 100%;
+            border-radius: 10px;
+            height: 150px;
+            background-color: #4C7CF3;
+            margin-top: 20px;
+        }
+    }
+}

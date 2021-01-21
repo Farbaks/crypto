@@ -1,0 +1,108 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/trade" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Trade</p>
+        </div>
+      </div>
+      <div class="trade-type">
+        <p *ngIf="this.type == 'buy'">
+          <span class="action">BUY</span>&nbsp;
+          <span class="action blue">BTC</span>&nbsp;
+          from
+          <span class="action">Malawi</span>
+        </p>
+        <p *ngIf="this.type == 'sell'">
+          <span class="action">SELL</span>&nbsp;
+          <span class="action blue">BTC</span>&nbsp;
+          to
+          <span class="action">Malawi</span>
+        </p>
+      </div>
+      <div class="trade-detail">
+        <div class="group1">
+          <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+          <div class="text-group1">
+            <p class="text1">Malawi</p>
+            <div class="contact-con">
+              <div class="contact-item">
+                <p class="text2">Email</p>
+                <span class="tick"></span>
+              </div>
+              <div class="contact-item">
+                <p class="text2">SMS</p>
+                <span class="tick"></span>
+              </div>
+              <div class="contact-item">
+                <p class="text2">KYC</p>
+                <span class="tick"></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="text-group1">
+          <p class="text3">91.21%</p>
+        </div>
+      </div>
+    </div>
+    <div class="pad">
+      <div class="trade-detail2">
+        <p class="text2">Seller Accepted Payments:</p>
+        <div class="small-icon">
+          <img src="../../../assets/icons/safebox.png" />
+          <img src="../../../assets/icons/receipt.png" />
+        </div>
+      </div>
+      <div class="trade-detail2">
+        <p class="text2">Limit:</p>
+        <p class="text1">$100.00 - $100.00</p>
+      </div>
+      <div class="trade-detail2">
+        <p class="text2">Price:</p>
+        <p class="text1">$13,000.00</p>
+      </div>
+      <div class="trade-detail2" *ngIf="this.type == 'sell'">
+        <p class="text2">Quantity:</p>
+        <p class="text1">0.003428BTC</p>
+      </div>
+    </div>
+    <div class="pad">
+      <div class="form-input1">
+        <span class="currency">$</span>
+        <input type="number" placeholder="Enter Amount" />
+        <span class="action">All</span>
+      </div>
+    </div>
+    <p class="text-heading1 ">You get:</p>
+    <div class="pad">
+      <div class="summary">
+        <div class="trade-detail">
+          <p class="text2">Quantity:</p>
+          <p class="text1">0.003427BTC</p>
+        </div>
+        <div class="trade-detail">
+          <p class="text2">Amount:</p>
+          <p class="text1">$13,000.00</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-input2"  *ngIf="this.type == 'sell'">
+      <select>
+        <option>Select payment method</option>
+      </select>
+    </div>
+    <div class="pad">
+      <button  *ngIf="this.type == 'buy'">Buy BTC</button>
+      <button  *ngIf="this.type == 'sell'">Sell BTC</button>
+      <div class="bottom-text">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nulla ipsa animi voluptatibus reprehenderit aut,
+          fuga eveniet fugiat eius reiciendis voluptate nostrum. Optio, illo in. Repellendus nam cum eum perspiciatis.
+        </p>
+      </div>
+    </div>
+  </div>
+</ion-content>

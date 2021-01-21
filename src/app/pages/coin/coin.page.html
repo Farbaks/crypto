@@ -1,0 +1,255 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/wallet" text="" icon="arrow-back-outline"></ion-back-button>
+          <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
+          <p class="text-heading">Coin</p>
+        </div>
+        <div id="searchicon" (click)="this.openSearchBar()">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <div class="search-input" id="searchcon">
+          <div id="searchbar">
+            <input type="search" placeholder="Search"/>
+            <ion-icon name="close-circle-outline"></ion-icon>
+          </div>
+          <span (click)="this.closeSearchBar()">Cancel</span>
+        </div>
+      </div>
+      <div class="coin" [routerLink]="['coin']">
+        <img src="../../../assets/icons/png_512/ripple-1-441950.png" />
+        <div class="text-group1">
+          <p class="text1">USDT</p>
+          <p class="text2">Tether US</p>
+        </div>
+      </div>
+      <div class="text-con">
+        <div class="text-group">
+          <p class="status">Available</p>
+          <p class="amount green">0.000035</p>
+        </div>
+        <div class="text-group">
+          <p class="status">In Orders</p>
+          <p class="amount red">0.0000000</p>
+        </div>
+        <div class="text-group">
+          <p class="status">Estimated ($)</p>
+          <p class="amount">0.0000345</p>
+        </div>
+      </div>
+    </div>
+    <p class="text-heading1">Transaction History (<span>USDT</span>)</p>
+    <ion-segment mode="md" (ionChange)="segmentChanged($event)" [(ngModel)]="segmentValue">
+      <ion-segment-button value="p2p">
+        <ion-label>P2P</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="spot">
+        <ion-label>SPOT</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <div class="section" *ngIf="this.segmentValue=='p2p'">
+      <table>
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="red">OUT</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="orange bgorange">Pending</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="red bgred">Canceled</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-class1">
+        <button [routerLink]="['/tabs/trade']">Goto P2P Market</button>
+        <button [routerLink]="['transfer']">Transfer</button>
+      </div>
+    </div>
+    <div class="section" *ngIf="this.segmentValue=='spot'">
+      <table>
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="red">OUT</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="orange bgorange">Pending</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="red bgred">Canceled</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="red">OUT</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="orange bgorange">Pending</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="red bgred">Canceled</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="red">OUT</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="orange bgorange">Pending</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="red bgred">Canceled</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="red">OUT</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="orange bgorange">Pending</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="red bgred">Canceled</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+          <tr>
+            <td>1.00000</td>
+            <td><span class="green">IN</span></td>
+            <td><span class="green bggreen">Completed</span></td>
+            <td>13:04 12/2020</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="button-class1">
+        <div class="card-list">
+          <div class="card-item">
+            <img src="../../../assets/icons/safebox.png" />
+            <p>Deposit</p>
+          </div>
+          <div class="card-item">
+            <img src="../../../assets/icons/withdrawal.png" />
+            <p>Withdrawal</p>
+          </div>
+          <div class="card-item">
+            <img src="../../../assets/icons/file.png" />
+            <p>Goto Market</p>
+          </div>
+          <div class="card-item">
+            <img src="../../../assets/icons/walkie-talkie.png" />
+            <p>Goto Exchange</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

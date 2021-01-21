@@ -1,0 +1,76 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Deposit</p>
+        </div>
+        <!-- <div class="img" [routerLink]="['history']">
+          <img src="../../../assets/icons/invoice.png" />
+        </div> -->
+      </div>
+    </div>
+    <div class="section1">
+      <div class="coin-filter">
+        <img src="{{this.selectedCoin.img}}" />
+        <select [(ngModel)]="this.selectedCoinName" (change)="changeCoin()">
+          <option *ngFor="let data of sampleData" value="{{data.name}}">{{data.name}}</option>
+        </select>
+      </div>
+    </div>
+    <ion-segment mode="md" [(ngModel)]="segmentValue">
+      <ion-segment-button value="standard">
+        <ion-label>STANDARD</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="card">
+        <ion-label>CARD DEPOSIT</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-slides #slides [options]="slideOpts" class="section2" *ngIf="this.segmentValue == 'card'">
+      <ion-slide>
+        <div class="section3">
+          <div class="form-input1">
+            <span class="currency">$</span>
+            <input type="number" placeholder="Enter Amount" [(ngModel)]="this.amount" />
+          </div>
+          <p class="small-text">$ {{this.amount}} {{this.selectedCoinName}}</p>
+          <p class="small-text2">A 3rd party service like monopoly will be used.</p>
+          <div class="fixed-button">
+            <button (click)="this.next()">Continue</button>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="section3">
+          <p class="text-subheading">Network</p>
+          <p class="small-block">
+            <span>ERC20</span>
+            <span>TRC20</span>
+          </p>
+          <p class="text-subheading">USDT Deposit Address</p>
+          <div class="coin-filter">
+            <p class="text1">bjxhg34rjhb23ghhgh23</p>
+            <p class="text2" (click)="this.copyValue()">COPY</p>
+          </div>
+          <span class="img">
+            <img src="../../..//assets/icons/qr1.png" />
+          </span>
+          <div class="fixed-button2">
+            <button>Save QR code</button>
+            <button (click)="this.prev()">Back</button>
+          </div>
+          <div class="bottom-text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, nulla ipsa animi voluptatibus
+              reprehenderit
+              aut,
+              fuga eveniet fugiat eius reiciendis voluptate nostrum. Optio, illo in. Repellendus nam cum eum
+              perspiciatis.
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>
