@@ -8,7 +8,7 @@ ion-content {
         width: 100%;
         display: flex;
         flex-flow: column;
-        height: 180px;
+        height: 200px;
         padding: 16px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -100,7 +100,7 @@ ion-content {
             .text-subheading1 {
                 font-size: 0.7em;
                 color: var(--ion-color-textcolor6);
-                font-weight: 100;
+                font-weight: 400;
                 letter-spacing: 0.5px;
                 margin: 5px 0px;
             }
@@ -130,9 +130,9 @@ ion-content {
 
                 p {
                     margin: 0 2px 0px 5px;
-                    font-size: 0.9em;
+                    font-size: 0.8em;
                     color: var(--ion-color-textcolor1);
-                    font-weight: 100;
+                    font-weight: 400;
                 }
                 img {
                     width: 18px;
@@ -183,7 +183,7 @@ ion-content {
                 .text1 {
                     font-size: 0.73em;
                     color: var(--ion-color-textcolor3);
-                    font-weight: 100;
+                    font-weight: 400;
                     letter-spacing: 0.5px;
                     margin: 5px 0px;
                 }
@@ -197,7 +197,7 @@ ion-content {
                 .text3 {
                     font-size: 0.73em;
                     color: var(--ion-color-backgroundcolor2);
-                    font-weight: 100;
+                    font-weight: 400;
                     letter-spacing: 0.5px;
                     margin: 5px 0px;
                 }
@@ -276,13 +276,13 @@ ion-content {
                     .text2 {
                         font-size: 0.73em;
                         color: var(--ion-color-textcolor3);
-                        font-weight: 100;
+                        font-weight: 400;
                         letter-spacing: 0.5px;
                     }
                     .text3 {
                         font-size: 0.73em;
                         color: var(--ion-color-backgroundcolor2);
-                        font-weight: 100;
+                        font-weight: 400;
                         letter-spacing: 0.5px;
                     }
                 }

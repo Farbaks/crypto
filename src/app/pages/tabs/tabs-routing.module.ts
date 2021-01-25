@@ -36,6 +36,10 @@ const routes: Routes = [
             path: 'deposit',
             loadChildren: () => import('src/app/pages/deposit/deposit.module').then( m => m.DepositPageModule)
           },
+          {
+            path: 'coins',
+            loadChildren: () => import('src/app/pages/coin-overview/coin-overview.module').then( m => m.CoinOverviewPageModule)
+          },
         ]
       },
       {

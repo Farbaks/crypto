@@ -48,17 +48,21 @@
                 width: 0px;
             }
             .search-input {
+                width: 100%;
                 display: none;
                 align-items: center;
-                div{
+                padding-left: 16px;
+                div#coin-searchbar{
                     display: flex;
                     align-items: center;
                     padding: 5px;
                     border-radius: 15px;
                     overflow: hidden;
+                    flex-grow: 1;
                     background-color: white;
                     transition: ease all .4s !important;
                     width: 0px;
+                    border:solid 1px rgb(220,220,220);
                     
                     input {
                         outline: transparent;
@@ -104,7 +108,7 @@
                 .text2 {
                     font-size: 0.73em;
                     color: var(--ion-color-textcolor3);
-                    font-weight: 100;
+                    font-weight: 400;
                     letter-spacing: 0.5px;
                 }
             }
@@ -121,7 +125,7 @@
                 .status {
                     font-size: 0.73em;
                     color: var(--ion-color-textcolor3);
-                    font-weight: 100;
+                    font-weight: 400;
                     letter-spacing: 0.5px;
                 }
                 .amount {
@@ -188,6 +192,7 @@
         table {
             width: 100%;
             margin-top: 20px;
+            margin-bottom: 110px;
             background-color: white;
             thead tr th, tbody tr td {
                 padding: 18px 16px;
@@ -271,7 +276,7 @@
                         margin: 10px 0 0 0;
                         font-size: 0.62em;
                         color: var(--ion-color-textcolor1);
-                        font-weight: 100;
+                        font-weight: 400;
                         margin-bottom: 2px;
                     }
                     img {

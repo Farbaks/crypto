@@ -16,14 +16,16 @@ export class TradePage implements OnInit {
   }
 
   openSearchBar() {
-    document.getElementById('searchicon').style.display = "none";
-    document.getElementById('searchcon').style.display = "flex";
-    document.getElementById('searchbar').style.width = "auto";
+    document.getElementById('trade-searchicon').style.display = "none";
+    document.getElementById('trade-title').style.display = "none";
+    document.getElementById('trade-searchcon').style.display = "flex";
+    document.getElementById('trade-searchbar').style.width = "auto";
   }
   closeSearchBar() {
-    document.getElementById('searchicon').style.display = "flex";
-    document.getElementById('searchcon').style.display = "none";
-    document.getElementById('searchbar').style.width = "0px";
+    document.getElementById('trade-searchicon').style.display = "flex";
+    document.getElementById('trade-title').style.display = "block";
+    document.getElementById('trade-searchcon').style.display = "none";
+    document.getElementById('trade-searchbar').style.width = "0px";
   }
 
 }

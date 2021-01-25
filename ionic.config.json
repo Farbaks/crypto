@@ -1,5 +1,10 @@
 {
   "name": "crypto",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {
+      "enabled": false
+    },
+    "cordova": {}
+  },
   "type": "angular"
 }

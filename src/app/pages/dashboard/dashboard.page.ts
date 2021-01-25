@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 import { Chart } from 'chart.js';
 
 @Component({
@@ -10,14 +11,28 @@ export class DashboardPage implements OnInit {
   @ViewChild('myChart') myChart;
   @ViewChild('myChart2') myChart2;
   @ViewChild('myChart3') myChart3;
+  @ViewChild('banners') banners: IonSlides;
   chart: any;
   chart2: any;
   chart3: any;
   constructor() {
+    this.bannerLoop();
   }
 
   ngOnInit() {
     // this.loadCharts();
+  }
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400,
+    loop:true,
+    spaceBetween:16,
+    autoHeight:true
+  };
+  bannerLoop() {
+    setInterval(() => {
+      this.banners.slideNext();
+    }, 5000);
   }
   ionViewDidEnter() {
     this.loadCharts();

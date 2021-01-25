@@ -16,14 +16,16 @@ export class CoinPage implements OnInit {
   }
 
   openSearchBar() {
-    document.getElementById('searchicon').style.display = "none";
-    document.getElementById('searchcon').style.display = "flex";
-    document.getElementById('searchbar').style.width = "auto";
+    document.getElementById('coin-searchicon').style.display = "none";
+    document.getElementById('coin-title').style.display = "none";
+    document.getElementById('coin-searchcon').style.display = "flex";
+    document.getElementById('coin-searchbar').style.width = "auto";
   }
   closeSearchBar() {
-    document.getElementById('searchicon').style.display = "flex";
-    document.getElementById('searchcon').style.display = "none";
-    document.getElementById('searchbar').style.width = "0px";
+    document.getElementById('coin-searchicon').style.display = "flex";
+    document.getElementById('coin-title').style.display = "flex";
+    document.getElementById('coin-searchcon').style.display = "none";
+    document.getElementById('coin-searchbar').style.width = "0px";
   }
 
   segmentChanged() {

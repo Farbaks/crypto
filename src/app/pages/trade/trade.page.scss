@@ -49,17 +49,21 @@ ion-content {
                 width: 0px;
             }
             .search-input {
+                width: 100%;
                 display: none;
                 align-items: center;
-                div{
+                padding-left: 16px;
+                div#trade-searchbar{
                     display: flex;
                     align-items: center;
                     padding: 5px;
                     border-radius: 15px;
                     overflow: hidden;
+                    flex-grow: 1;
                     background-color: white;
                     transition: ease all .4s !important;
                     width: 0px;
+                    border:solid 1px rgb(220,220,220);
                     
                     input {
                         outline: transparent;
@@ -127,7 +131,10 @@ ion-content {
             display: flex;
             flex-flow: row nowrap;
             padding: 16px;
-            padding-right: 100px;
+            &::after {
+                content: '';
+                padding: 0.1px;
+            }
             overflow: auto;
             .tag-item {
                 font-size: .7em;
@@ -197,7 +204,7 @@ ion-content {
                         .text3 {
                             font-size: 0.83em;
                             color: var(--ion-color-backgroundcolor2);
-                            font-weight: 100;
+                            font-weight: 400;
                             letter-spacing: 0.5px;
                         }
                         .small-icon {

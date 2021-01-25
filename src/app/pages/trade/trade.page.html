@@ -4,13 +4,13 @@
       <div class="top-1">
         <div class="nav">
           <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
-          <p class="text-heading">Trade</p>
+          <p class="text-heading" id="trade-title">Trade</p>
         </div>
-        <div id="searchicon" (click)="this.openSearchBar()">
+        <div id="trade-searchicon" (click)="this.openSearchBar()">
           <ion-icon name="search-outline"></ion-icon>
         </div>
-        <div class="search-input" id="searchcon">
-          <div id="searchbar">
+        <div class="search-input" id="trade-searchcon">
+          <div id="trade-searchbar">
             <input type="search" placeholder="Search" />
             <ion-icon name="close-circle-outline"></ion-icon>
           </div>

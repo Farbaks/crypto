@@ -85,6 +85,10 @@ const routes: Routes = [
     path: 'deposit',
     loadChildren: () => import('./pages/deposit/deposit.module').then( m => m.DepositPageModule)
   },
+  {
+    path: 'coin-overview',
+    loadChildren: () => import('./pages/coin-overview/coin-overview.module').then( m => m.CoinOverviewPageModule)
+  },
 ];
 
 @NgModule({

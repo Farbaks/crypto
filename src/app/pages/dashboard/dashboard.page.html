@@ -42,7 +42,7 @@
         </div>
         <div class="card-item" [routerLink]="['/withdraw']">
           <img src="../../../assets/icons/withdrawal.png" />
-          <p>Withdrawal</p>
+          <p>Withdraw</p>
         </div>
         <div class="card-item">
           <img src="../../../assets/icons/file.png" />
@@ -109,7 +109,17 @@
         <button>VIEW ALL</button>
       </div>
       <div class="card">
-
+        <ion-slides pager="true" [options]="slideOpts" #banners>
+          <ion-slide>
+            <img src="../../../assets/icons/banner1.jpg" />
+          </ion-slide>
+          <ion-slide>
+            <img src="../../../assets/icons/banner2.jpg" />
+          </ion-slide>
+          <ion-slide>
+            <img src="../../../assets/icons/banner3.jpg" />
+          </ion-slide>
+        </ion-slides>
       </div>
     </div>
   </div>

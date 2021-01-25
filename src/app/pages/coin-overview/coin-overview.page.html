@@ -1,0 +1,170 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/tabs/dashboard" text="" icon="arrow-back-outline"></ion-back-button>
+          <p class="text-heading">Coins</p>
+        </div>
+        <!-- <div>
+          <ion-icon name="ellipsis-vertical"></ion-icon>
+        </div> -->
+      </div>
+      <div class="top-2">
+        <p>
+          <span class="text-heading1">0.03425BTC</span>
+          <span class="rate">
+            <ion-icon name="chevron-up"></ion-icon>
+            <span>2.30%</span>
+          </span>
+          <span class="amount">$321.20</span>
+        </p>
+        <p class="text-subheading1">Wallet Balance</p>
+      </div>
+    </div>
+    <div class="content-2">
+      <div class="card-list">
+        <div class="card-item" [routerLink]="['deposit']">
+          <img src="../../../assets/icons/download.png" />
+          <p>Deposit</p>
+        </div>
+        <div class="card-item" [routerLink]="['/withdraw']">
+          <img src="../../../assets/icons/upload.png" />
+          <p>Withdrawal</p>
+        </div>
+        <div class="card-item" [routerLink]="['transfer']">
+          <img src="../../../assets/icons/transfer.png" />
+          <p>Transfer</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="balance-list">
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/ripple-1-441950.png" />
+          <div class="text-group1">
+            <p class="text1">USDT</p>
+            <p class="text2">Tether US</p>
+          </div>
+          <div class="chart">
+          </div>
+          <div class="text-group2">
+            <p class="text1">209.13USDT</p>
+            <p class="text3">$20.00</p>
+          </div>
+        </div>
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+          <div class="text-group1">
+            <p class="text1">BTC</p>
+            <p class="text2">Bitcoin</p>
+          </div>
+          <div class="chart">
+          </div>
+          <div class="text-group2">
+            <p class="text1">0.03425BTC</p>
+            <p class="text3">$240.00</p>
+          </div>
+        </div>
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/litecoin-22-441956.png" />
+          <div class="text-group1">
+            <p class="text1">LTE</p>
+            <p class="text2">Lite coin</p>
+          </div>
+          <div class="chart">
+          </div>
+          <div class="text-group2">
+            <p class="text1">34.432LTC</p>
+            <p class="text3">$130.00</p>
+          </div>
+        </div>
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/litecoin-22-441956.png" />
+          <div class="text-group1">
+            <p class="text1">LTE</p>
+            <p class="text2">Lite coin</p>
+          </div>
+          <div class="chart">
+          </div>
+          <div class="text-group2">
+            <p class="text1">34.432LTC</p>
+            <p class="text3">$130.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section" *ngIf="this.segmentValue=='spot'">
+      <div class="section-top">
+        <div class="text-con">
+          <p class="text1">SPOT estimated value</p>
+          <p class="text2">0.30243BTC</p>
+          <p class="text3">= $300.21</p>
+        </div>
+      </div>
+      <div class="filter">
+        <div class="filter-box1">
+          <input type="checkbox" />
+          <span>Hide Small Balances</span>
+        </div>
+        <div class="filter-box1">
+          <div class="filter-box2">
+            <img src="../../../assets/icons/search.png" />
+            <input type="search" placeholder="Search here" />
+          </div>
+        </div>    
+      </div>
+      <div class="balance-list">
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/ripple-1-441950.png" />
+          <div class="text-group1">
+            <p class="text1">USDT</p>
+            <p class="text2">Tether US</p>
+          </div>
+          <div class="chart">
+            <!-- <canvas #myChart height="150"></canvas> -->
+          </div>
+          <div class="text-group2">
+            <p class="text1">209.13USDT</p>
+            <p class="text3">$20.00</p>
+          </div>
+        </div>
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/bitcoin-176-441959.png" />
+          <div class="text-group1">
+            <p class="text1">BTC</p>
+            <p class="text2">Bitcoin</p>
+          </div>
+          <div class="chart">
+            <!-- <canvas #myChart2 height="150"></canvas> -->
+          </div>
+          <div class="text-group2">
+            <p class="text1">0.03425BTC</p>
+            <p class="text3">$240.00</p>
+          </div>
+        </div>
+        <div class="balance-item" [routerLink]="['/coin']">
+          <img src="../../../assets/icons/png_512/litecoin-22-441956.png" />
+          <div class="text-group1">
+            <p class="text1">LTE</p>
+            <p class="text2">Lite coin</p>
+          </div>
+          <div class="chart">
+            <!-- <canvas #myChart3 height="150"></canvas> -->
+            <app-minichart [backgroundColor]="'transparent'" [borderColor]="'red'" [data] = "this.data" [height] = "150"></app-minichart>
+          </div>
+          <div class="text-group2">
+            <p class="text1">34.432LTC</p>
+            <p class="text3">$130.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

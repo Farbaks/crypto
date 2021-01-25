@@ -5,13 +5,13 @@
         <div class="nav">
           <ion-back-button defaultHref="/tabs/wallet" text="" icon="arrow-back-outline"></ion-back-button>
           <!-- <ion-icon name="arrow-back-outline"></ion-icon> -->
-          <p class="text-heading">Coin</p>
+          <p class="text-heading" id="coin-title">Coin</p>
         </div>
-        <div id="searchicon" (click)="this.openSearchBar()">
+        <div id="coin-searchicon" (click)="this.openSearchBar()">
           <ion-icon name="search-outline"></ion-icon>
         </div>
-        <div class="search-input" id="searchcon">
-          <div id="searchbar">
+        <div class="search-input" id="coin-searchcon">
+          <div id="coin-searchbar">
             <input type="search" placeholder="Search"/>
             <ion-icon name="close-circle-outline"></ion-icon>
           </div>

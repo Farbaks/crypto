@@ -47,6 +47,7 @@ export class DepositPage implements OnInit {
     initialSlide: 0,
     speed: 400,
     allowTouchMove: false,
+    autoHeight:true
   };
 
   ngOnInit() {
