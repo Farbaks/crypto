@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-icon name="arrow-back-outline" (click)="this.dismiss()"></ion-icon>
+          <p class="text-heading">Add Bank Transfer</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="form">
+        <div class="input-box">
+          <p>Name</p>
+          <input type="text" placeholder="Enter Account Name" />
+        </div>
+        <div class="input-box">
+          <p>Bank account number</p>
+          <input type="text" placeholder="Please enter your bank account number" />
+        </div>
+        <div class="input-box">
+          <p>Bank name</p>
+          <input type="text" placeholder="Enter the name of your bank" />
+        </div>
+        <div class="input-box">
+          <p>Account opening branch (Optional)</p>
+          <input type="text" placeholder="Enter your bank branch information" />
+        </div>
+      </div>
+      <div class="pad">
+        <p class="small-text">Tip: The added method will be shown to the buyer during the transaction to accept Fiat transfers. Please make sure the information is correct.</p>
+        <button (click)="this.dismissWithInfo()">Confirm</button>
+      </div>
+      
+    </div>
+  </div>
+</ion-content>

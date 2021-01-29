@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-icon name="arrow-back-outline" (click)="this.dismiss()"></ion-icon>
+          <p class="text-heading">All Payment Methods</p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="pad">
+        <div class="searchbar">
+          <ion-icon name="search-outline"></ion-icon>
+          <input type="search" placeholder="Search for a payment method" />
+        </div>
+      </div>
+      <div class="method-list">
+        <ion-item-group *ngFor="let section of dividers">
+          <ion-item-divider mode="ios" id="{{ section }}">
+            <ion-label mode="ios">{{section}}</ion-label>
+          </ion-item-divider>
+          <div id="{{ section }}-con">
+            <div class="payment-item" (click)="this.newMethodForm()">
+              <img src="../../../assets/icons/safebox.png" />
+              <ion-label mode="ios">Angola</ion-label>
+            </div>
+            <div class="payment-item" (click)="this.newMethodForm()">
+              <img src="../../../assets/icons/receipt.png" />
+              <ion-label mode="ios">Argentina</ion-label>
+            </div>
+            <div class="payment-item" (click)="this.newMethodForm()">
+              <img src="../../../assets/icons/withdrawal.png" />
+              <ion-label mode="ios">Armenia</ion-label>
+            </div>
+          </div>
+          
+        </ion-item-group>
+      </div>
+      <div class="side-nav">
+        <p *ngFor="let section of dividers" (click)="this.goToDiv(section)">{{section}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>

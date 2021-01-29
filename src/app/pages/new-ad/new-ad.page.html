@@ -1,0 +1,261 @@
+<ion-content>
+  <div class="content">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-icon name="arrow-back-outline" (click)="this.showWarning()"></ion-icon>
+          <p class="text-heading">New Ad</p>
+        </div>
+      </div>
+    </div>
+    <div class="top-info">
+      <p *ngIf="this.currentStep == 0">Set Type & Price</p>
+      <p *ngIf="this.currentStep == 1">Set price type & Payment method</p>
+      <p *ngIf="this.currentStep == 2">Set conditions, remarks & auto response</p>
+      <div class="steps">
+        <span class="done">1</span>
+        <div class="line"></div>
+        <span class="done" *ngIf="this.currentStep > 0">2</span>
+        <span class="not-done" *ngIf="this.currentStep < 1">2</span>
+        <div class="line"></div>
+        <span class="done" *ngIf="this.currentStep == 2">3</span>
+        <span class="not-done" *ngIf="this.currentStep < 2">3</span>
+      </div>
+    </div>
+    <ion-slides #slides [options]="slideOpts" (ionSlideDidChange)="this.stepChanged()">
+      <!-- Step 1 -->
+      <ion-slide>
+        <div class="section">
+          <ion-segment mode="md" [(ngModel)]="segmentValue1">
+            <ion-segment-button value="buy">
+              <ion-label>BUY</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="sell">
+              <ion-label>SELL</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          <!-- Segment to buy -->
+          <div class="sec-1">
+            <div class="sec-2">
+              <div class="sec-3">
+                <p class="text1">Asset</p>
+                <div class="coin-filter">
+                  <select>
+                    <option *ngFor="let data of sampleData" value="{{data.name}}">{{data.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="sec-3">
+                <p class="text1">Fiat</p>
+                <div class="coin-filter">
+                  <select>
+                    <option *ngFor="let data of sampleData" value="{{data.name}}">{{data.name}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="sec-2">
+              <div class="sec-4">
+                <p class="text1">Your Price</p>
+                <p class="text2">$1.00</p>
+              </div>
+              <div class="sec-4">
+                <p class="text1">Lowest Order</p>
+                <p class="text2">$0.99</p>
+              </div>
+            </div>
+            <p class="text3">Amount to Trade</p>
+            <div class="coin-filter">
+              <input type="number" [(ngModel)]="this.coinValue" />
+              <p class="coin-text1">USD</p>
+              <p class="coin-text2" (click)="this.maxValue()">MAX</p>
+            </div>
+            <div class="sec-5">
+              <p class="small-text">Available Balance:
+                <span class="green">
+                  1000 USD
+                </span>
+              </p>
+              <p class="small-text">$10,000 </p>
+            </div>
+            <p class="text3 pad-with-top-border">Order Limit</p>
+            <div class="sec-5">
+              <div class="order-filter">
+                <input type="number" [(ngModel)]="this.coinValue" />
+                <p>USD</p>
+              </div>
+              <div class="order-filter">
+                <input type="number" [(ngModel)]="this.coinValue" />
+                <p>USD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <!-- Step 2 -->
+      <ion-slide>
+        <div class="section">
+          <div class="top-info">
+            <p>Price Type:</p>
+          </div>
+          <ion-segment mode="md" [(ngModel)]="segmentValue2">
+            <ion-segment-button value="floating">
+              <ion-label>FLOATING</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="fixed">
+              <ion-label>FIXED</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+          <!-- Floating segment -->
+          <div class="sec-1" *ngIf="this.segmentValue2=='floating'">
+            <div class="sec-5">
+              <p class="text3">Floating Price Margin<ion-icon name="information-circle-outline"
+                  (click)="this.displayInfo()"></ion-icon>
+              </p>
+              <div class="input-box">
+                <span class="action" (click)="this.reduceFloatValue()">-</span>
+                <div class="input">
+                  <input type="number" min="0.00" max="100.00" [(ngModel)]="this.floatValue" />
+                  <span>%</span>
+                </div>
+                <span class="action" (click)="this.increaseFloatValue()">+</span>
+              </div>
+            </div>
+          </div>
+          <!-- Fixed Segment -->
+          <div class="sec-1" *ngIf="this.segmentValue2=='fixed'">
+            <div class="sec-5">
+              <p class="text3">Fixed Price Margin<ion-icon name="information-circle-outline"
+                  (click)="this.displayInfo()"></ion-icon>
+              </p>
+              <div class="input-box">
+                <span class="action" (click)="this.reduceFloatValue()">-</span>
+                <div class="input">
+                  <input type="number" [(ngModel)]="this.floatValue" />
+                  <span>%</span>
+                </div>
+                <span class="action" (click)="this.increaseFloatValue()">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="payment-section">
+            <div class="payment-div" *ngIf="this.segmentValue1=='sell'">
+              <div class="payment-top">
+                <div class="top-left">
+                  <p>Payment Methods</p>
+                  <p>You can add more</p>
+                </div>
+                <button (click)= "this.selectPayment()">
+                  <ion-icon name="add-outline"></ion-icon>Add
+                </button>
+              </div>
+              <div class="payment-b2">
+                <div class="payment-type">
+                  <span>
+                    <p>Bank Transfer</p>
+                    <p>Martin Udor</p>
+                    <p>0198786709</p>
+                    <p>GT Bank</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="payment-type">
+                  <span>
+                    <p>Bank Transfer</p>
+                    <p>Martin Udor</p>
+                    <p>0198786709</p>
+                    <p>GT Bank</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="payment-type">
+                  <span>
+                    <p>Bank Transfer</p>
+                    <p>Martin Udor</p>
+                    <p>0198786709</p>
+                    <p>GT Bank</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="payment-div" *ngIf="this.segmentValue1=='buy'">
+              <div class="payment-top">
+                <div class="top-left">
+                  <p>Payment Methods</p>
+                  <p>Select up to 3 methods</p>
+                </div>
+                <button (click)= "this.selectPayment()">
+                  <ion-icon name="add-outline"></ion-icon>Add
+                </button>
+              </div>
+              <div class="payment-b1">
+                <div class="payment-type">
+                  <span>
+                    <img src="../../../assets/icons/safebox.png" />
+                    <p>ABA Bank</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="payment-type">
+                  <span>
+                    <img src="../../../assets/icons/safebox.png" />
+                    <p>ABA Bank</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+                <div class="payment-type">
+                  <span>
+                    <img src="../../../assets/icons/piggy-bank.png" />
+                    <p>Bank Transfer</p>
+                  </span>
+                  <ion-icon name="close-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="payment-section">
+            <div class="payment-time-filter">
+              <p class="text3">Payment time given<ion-icon name="information-circle-outline"
+                  (click)="this.displayInfo()"></ion-icon>
+              </p>
+              <select>
+                <option>15m</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="section">
+          <div class="sec-1">
+            <p class="text3">Remarks (Optional)</p>
+            <div class="response-filter">
+              <textarea placeholder="eg. please call my phone in 5 minutes if I don't respond"></textarea>
+            </div>
+            <p class="text3">Auto-response (Optional)</p>
+            <div class="response-filter">
+              <textarea placeholder="This message is sent once the courier part creates an order"></textarea>
+            </div>
+          </div>
+          <ion-radio-group value="online" mode="md">
+            <div>
+              <ion-radio slot="start" value="online"></ion-radio>
+              <ion-label>Online - make ad public on post</ion-label>
+            </div>
+            <div>
+              <ion-radio slot="start" value="offline"></ion-radio>
+              <ion-label>Publish ad later</ion-label>
+            </div>
+          </ion-radio-group>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    <div class="fixed-button">
+      <button class="button2 half-width" (click)="this.prev()" *ngIf="this.currentStep > 0">Previous</button>
+      <button class="button" (click)="this.next()" *ngIf="this.currentStep == 0">Next</button>
+      <button class="button half-width" (click)="this.next()" *ngIf="this.currentStep == 1">Next</button>
+      <button class="button half-width" (click)="this.next()" *ngIf="this.currentStep == 2">Post</button>
+    </div>
+  </div>
+</ion-content>

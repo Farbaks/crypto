@@ -29,4 +29,48 @@
 * {
     outline: transparent;
 }
+.info-popup {
+    --background: rgb(40,40,40);
+    width: 100% !important;
+}
+.info-popup .popover-content {
+    left: 16px !important;
+    right: 16px !important;
+    width: 90% !important;
+}
+
+.warning-popup {
+    --background: rgb(40,40,40);
+    --backdrop-opacity: .6;
+    width: 100% !important;
+}
+.warning-popup .popover-content {
+    left: 16px !important;
+    right: 16px !important;
+    width: 90% !important;
+}
+
+.otp {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+
+    
+}
+
+.otp-input {
+    // width: 15%;
+    padding: 5px;
+    box-sizing: content-box !important;
+    text-align: center;
+    border: none;
+    border-bottom: solid 3px var(--ion-color-textcolor3);
+    background-color: transparent;
+    color:var(--ion-color-textcolor1);
+    font-size: 2em;
+}
+.otp-input:not(:last-child){
+    margin-right: 6% !important;
+}
 

@@ -52,6 +52,10 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'myads',
+        loadChildren: () => import('src/app/pages/myads/myads.module').then( m => m.MyadsPageModule)
+      },
+      {
         path: 'wallet',
         children: [
           {

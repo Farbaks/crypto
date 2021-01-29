@@ -1,9 +1,47 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="container">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/signin" text="" icon="arrow-back-outline"></ion-back-button>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="body-heading">
+        <p class="profile-heading">Sign Up</p>
+      </div>
+      <p class="text2">Create an account to start trading!</p>
+      <div class="section">
+        <div class="input-div">
+          <p>First Name:</p>
+          <input type="text"  />
+        </div>
+        <div class="input-div">
+          <p>Last Name:</p>
+          <input type="text"  />
+        </div>
+        <div class="input-div">
+          <p>Email:</p>
+          <input type="email"  />
+        </div>
+        <div class="input-div">
+          <p>Phone Number:</p>
+          <input type="text"  />
+        </div>
+        <div class="input-div">
+          <p>Password:</p>
+          <input type="password"  />
+        </div>
+        <div class="input-div">
+          <p>Re enter Password:</p>
+          <input type="password"  />
+        </div>
+      </div>
+      <p class="text">Already have an account? <span [routerLink]='["/signin"]' class="link">Sign in</span></p>
+      <div class="fixed-button">
+        <button class="button" [routerLink]='["/tabs"]'>Create Account</button>
+      </div>
+    </div>
+  </div>
 </ion-content>

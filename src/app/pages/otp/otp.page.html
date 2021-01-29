@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>otp</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content>
-
+  <div class="container">
+    <div class="top">
+      <div class="top-1">
+        <div class="nav">
+          <ion-back-button defaultHref="/signin" text="" icon="arrow-back-outline"></ion-back-button>
+        </div>
+      </div>
+    </div>
+    <div class="body">
+      <div class="body-heading">
+        <p class="profile-heading">OTP Verification</p>
+      </div>
+      <p class="text2"> Enter the verification code we just sent you on your email address.</p>
+      <div class="section">
+        <div class="input-div">
+          <ng-otp-input  (onInputChange)="onOtpChange($event)"  [config]="this.config"></ng-otp-input>
+        </div>
+      </div>
+      <p class="text"> Didn't receive any code? <span class="link">Resend OTP</span></p>
+      <div class="add-buttons">
+        <p class="bt1" [routerLink]='["/tabs"]'>Verify</p>
+      </div>
+      
+    </div>
+  </div>
 </ion-content>

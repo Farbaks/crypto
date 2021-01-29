@@ -1,0 +1,9 @@
+<div class="message">
+  <ion-icon name="alert-circle-outline"></ion-icon>
+  <p class="heading">{{heading}}</p>
+  <p class="body">{{message}}</p>
+  <div class="buttons">
+    <button class="half-width" (click)="this.action('cancel')">Cancel</button>
+    <button class="half-width" (click)="this.action('action')">{{actionType}}</button>
+  </div>
+</div>

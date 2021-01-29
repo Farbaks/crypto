@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'tabs',
+    redirectTo: 'signin',
     pathMatch: 'full'
   },
   {
@@ -88,6 +88,22 @@ const routes: Routes = [
   {
     path: 'coin-overview',
     loadChildren: () => import('./pages/coin-overview/coin-overview.module').then( m => m.CoinOverviewPageModule)
+  },
+  {
+    path: 'myads',
+    loadChildren: () => import('./pages/myads/myads.module').then( m => m.MyadsPageModule)
+  },
+  {
+    path: 'new-ad',
+    loadChildren: () => import('./pages/new-ad/new-ad.module').then( m => m.NewAdPageModule)
+  },
+  {
+    path: 'all-payment-methods',
+    loadChildren: () => import('./pages/all-payment-methods/all-payment-methods.module').then( m => m.AllPaymentMethodsPageModule)
+  },
+  {
+    path: 'new-payment-method',
+    loadChildren: () => import('./pages/new-payment-method/new-payment-method.module').then( m => m.NewPaymentMethodPageModule)
   },
 ];
 

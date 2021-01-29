@@ -25,15 +25,17 @@ export class DashboardPage implements OnInit {
   slideOpts = {
     initialSlide: 0,
     speed: 400,
-    loop:true,
-    spaceBetween:16,
-    autoHeight:true
+    loop: true,
+    spaceBetween: 16,
+    autoHeight: true
   };
+
   bannerLoop() {
     setInterval(() => {
       this.banners.slideNext();
     }, 5000);
   }
+
   ionViewDidEnter() {
     this.loadCharts();
   }
