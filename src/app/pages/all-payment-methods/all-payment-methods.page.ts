@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { NewPaymentMethodPage } from '../new-payment-method/new-payment-method.page';
+import { Vibration } from '@ionic-native/vibration/ngx';
 
 @Component({
   selector: 'app-all-payment-methods',
@@ -12,7 +13,7 @@ export class AllPaymentMethodsPage implements OnInit {
   paymentMethods: any;
   that = this;
   @Input() type: string;
-  constructor(public modalController: ModalController) {
+  constructor(public modalController: ModalController, private vibration: Vibration) {
     this.dividers = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"]
     this.paymentMethods = [
       {
@@ -102,6 +103,7 @@ export class AllPaymentMethodsPage implements OnInit {
   }
 
   goToDiv(n) {
+    this.vibration.vibrate(20);
     document.getElementById('' + n).style.position = "relative";
     setTimeout(() => {
       document.getElementById('' + n).scrollIntoView(true);

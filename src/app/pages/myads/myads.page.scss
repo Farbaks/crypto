@@ -119,6 +119,7 @@ ion-content {
             padding: 16px;
             position: sticky;
             top: 0;
+            z-index: 10;
             background-color: var(--ion-color-backgroundcolor4);
             select {
                 font-size: 1em;

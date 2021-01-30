@@ -27,24 +27,24 @@
         </edit-config>
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/Artboard 1ldpi-icon.png" />
-        <icon density="mdpi" src="resources/android/icon/Artboard 1mdpi-icon.png" />
-        <icon density="hdpi" src="resources/android/icon/Artboard 1hdpi-icon.png" />
-        <icon density="xhdpi" src="resources/android/icon/Artboard 1xhdpi-icon.png" />
-        <icon density="xxhdpi" src="resources/android/icon/Artboard 1xxhdpi-icon.png" />
-        <icon density="xxxhdpi" src="resources/android/icon/Artboard 1xxxhdpi-icon.png" />
-        <splash density="land-ldpi" src="resources/android/splash/land-Artboard 1ldpi-screen.png" />
-        <splash density="land-mdpi" src="resources/android/splash/land-Artboard 1mdpi-screen.png" />
-        <splash density="land-hdpi" src="resources/android/splash/land-Artboard 1hdpi-screen.png" />
-        <splash density="land-xhdpi" src="resources/android/splash/land-Artboard 1xhdpi-screen.png" />
-        <splash density="land-xxhdpi" src="resources/android/splash/land-Artboard 1xxhdpi-screen.png" />
-        <splash density="land-xxxhdpi" src="resources/android/splash/land-Artboard 1xxxhdpi-screen.png" />
-        <splash density="port-ldpi" src="resources/android/splash/Artboard 1ldpi-screen.png" />
-        <splash density="port-mdpi" src="resources/android/splash/Artboard 1mdpi-screen.png" />
-        <splash density="port-hdpi" src="resources/android/splash/Artboard 1hdpi-screen.png" />
-        <splash density="port-xhdpi" src="resources/android/splash/Artboard 1xhdpi-screen.png" />
-        <splash density="port-xxhdpi" src="resources/android/splash/Artboard 1xxhdpi-screen.png" />
-        <splash density="port-xxxhdpi" src="resources/android/splash/Artboard 1xxxhdpi-screen.png" />
+        <icon density="ldpi" src="resources/android/icon/Artboard 1ldpi.png" />
+        <icon density="mdpi" src="resources/android/icon/Artboard 1mdpi.png" />
+        <icon density="hdpi" src="resources/android/icon/Artboard 1hdpi.png" />
+        <icon density="xhdpi" src="resources/android/icon/Artboard 1xhdpi.png" />
+        <icon density="xxhdpi" src="resources/android/icon/Artboard 1xxhdpi.png" />
+        <icon density="xxxhdpi" src="resources/android/icon/Artboard 1xxxhdpi.png" />
+        <splash density="land-ldpi" src="resources/android/splash/land-Artboard 1ldpi.png" />
+        <splash density="land-mdpi" src="resources/android/splash/land-Artboard 1mdpi.png" />
+        <splash density="land-hdpi" src="resources/android/splash/land-Artboard 1hdpi.png" />
+        <splash density="land-xhdpi" src="resources/android/splash/land-Artboard 1xhdpi.png" />
+        <splash density="land-xxhdpi" src="resources/android/splash/land-Artboard 1xxhdpi.png" />
+        <splash density="land-xxxhdpi" src="resources/android/splash/land-Artboard 1xxxhdpi.png" />
+        <splash density="port-ldpi" src="resources/android/splash/Artboard 1ldpi.png" />
+        <splash density="port-mdpi" src="resources/android/splash/Artboard 1mdpi.png" />
+        <splash density="port-hdpi" src="resources/android/splash/Artboard 1hdpi.png" />
+        <splash density="port-xhdpi" src="resources/android/splash/Artboard 1xhdpi.png" />
+        <splash density="port-xxhdpi" src="resources/android/splash/Artboard 1xxhdpi.png" />
+        <splash density="port-xxxhdpi" src="resources/android/splash/Artboard 1xxxhdpi.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

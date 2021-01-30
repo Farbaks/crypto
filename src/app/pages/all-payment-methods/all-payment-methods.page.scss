@@ -11,7 +11,10 @@
         display: flex;
         flex-flow: column;
         padding: 16px;
-
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background-color: white;
         .top-1 {
             width: 100%;
             display: flex;
@@ -113,7 +116,12 @@
             padding: 20px 0;
         }
         .pad {
+            width: 100%;
             padding: 16px;
+            position: fixed;
+            margin-top: 56px;
+            z-index: 100;
+            background-color: white;
         }
         .searchbar {
             position: sticky;
@@ -140,12 +148,17 @@
             }
         }
         .method-list {
-            position: relative;
+            width: 100%;
+            position: fixed;
+            top: 132px;
+            bottom: 0;
+            overflow: scroll;
             ion-item-group {
                 ion-item-divider {
                     --background: var(--ion-color-backgroundcolor4);
                     position: sticky;
                     top: 0;
+                    z-index: 10;
                     ion-label {
                         padding: 8px;
                     }
@@ -174,24 +187,25 @@
 
         .side-nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             flex-flow: column;
             position: fixed;
             right: 0;
-            top: 0;
-            height: 100%;
-            padding: 3px 0 10px 0;
-            z-index: 1000;
+            top: 130px;
+            bottom: 0;
+            // height: 100%;
+            padding: 3px 5px 10px 5px;
+            z-index: 100;
             p {
-                margin: 0 0 1px 0;
-                font-size: 0.65em;
+                margin: 0;
+                font-size: 0.6em;
                 color: var(--ion-color-backgroundcolor1);
                 font-weight: 600;
                 letter-spacing: 0.2px;
-                padding: 3px;
+                padding: 2px 5px;
                 display: flex;
                 flex-shrink: 1;
-                background-color: white;
+                // background-color: white;
             }
         }
     }
